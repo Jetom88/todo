@@ -1,0 +1,20 @@
+form {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  .create-input {
+    width: 88%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #dfe6e9;
+  }
+  button {
+    cursor: pointer;
+    width: 9%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: white;
+    background: #74b9ff;
+  }
+}

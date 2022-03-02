@@ -1,0 +1,35 @@
+body {
+  box-sizing: border-box;
+  background: #eeeeee;
+}
+
+.App {
+  margin: 25px auto;
+  padding: 30px;
+  width: 50vw;
+  height: 50vw;
+  background: white;
+  border-radius: 2%;
+
+  .today {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .day {
+    margin-top: 0.4rem;
+    color: #b4b4b4;
+  }
+
+  h1 {
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .line {
+    border-top: 1px solid #b6b6b6;
+  }
+}

@@ -1,0 +1,22 @@
+.list-container {
+  margin-bottom: 0.8rem;
+
+  .list-con {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .list-btn {
+    cursor: pointer;
+    display: flex;
+    color: #b4b4b4;
+
+    :first-child {
+      margin-right: 10px;
+    }
+  }
+}
