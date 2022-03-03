@@ -10,13 +10,32 @@ function App() {
   const day = moment().format("dddd");
 
   const [todos, setTodos] = useState([]);
+  const [] = useState(0);
 
   const handleAddTodo = (text) => {
     if (text === "") {
       return alert("내용?? 왜 없?");
     } else {
-      setTodos([...todos].concat(text));
+      // [...todos].concat(text)
+      const todo = {
+        id: todos.length,
+        text,
+        checked: false,
+      };
+      setTodos([...todos].concat(todo));
     }
+  };
+
+  const handleRemove = (id) => {
+    setTodos((todos) => todos.filter((todo) => todo.id !== id));
+  };
+
+  const handleChecked = (id) => {
+    setTodos((todos) =>
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, checked: !todo.checked } : todo
+      )
+    );
   };
 
   return (
@@ -28,7 +47,11 @@ function App() {
       <h1>Todo List📝</h1>
       <div className="line" />
       <Create handleAddTodo={handleAddTodo} />
-      <List todos={todos} />
+      <List
+        todos={todos}
+        handleRemove={handleRemove}
+        handleChecked={handleChecked}
+      />
     </div>
   );
 }

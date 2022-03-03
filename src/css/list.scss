@@ -1,3 +1,9 @@
+.checked {
+  cursor: pointer;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
 .list-container {
   margin-bottom: 0.8rem;
 
@@ -7,6 +13,7 @@
 
     p {
       font-size: 1.3rem;
+      color: #222;
     }
   }
 
@@ -15,8 +22,18 @@
     display: flex;
     color: #b4b4b4;
 
-    :first-child {
-      margin-right: 10px;
+    .checked-icon {
+      margin-right: 15px;
+
+      &:hover {
+        color: #3ae374;
+      }
+    }
+
+    .delete-icon {
+      &:hover {
+        color: #eb4d4b;
+      }
     }
   }
 }
