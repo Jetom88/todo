@@ -10,13 +10,11 @@ function App() {
   const day = moment().format("dddd");
 
   const [todos, setTodos] = useState([]);
-  const [] = useState(0);
 
   const handleAddTodo = (text) => {
     if (text === "") {
       return alert("내용?? 왜 없?");
     } else {
-      // [...todos].concat(text)
       const todo = {
         id: todos.length,
         text,
